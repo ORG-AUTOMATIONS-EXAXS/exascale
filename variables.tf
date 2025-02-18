@@ -25,3 +25,12 @@ variable "exadb_vm_cluster_ssh_public_keys" {
 type        = list(string)
 description = "As chaves públicas SSH para acesso ao Exadata VM Cluster."
 }
+variable "db_name" {
+  default = "TFDB"
+}
+
+variable "test_db_password" {
+  default = "BEstrO0ng_#11"
+}
+
+

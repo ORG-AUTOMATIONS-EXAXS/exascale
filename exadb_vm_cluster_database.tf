@@ -3,7 +3,7 @@
 
 resource "oci_database_db_home" "test_db_home" {
   display_name = "ExampleExaDbVmDbHome"
-  db_system_id = oci_database_exadb_vm_cluster.test_exadb_vm_cluster.id
+  db_system_id = oci_database_exadb_vm_cluster.ExampleExadbVmCluster.id
   db_version   = data.oci_database_gi_version_minor_versions.test_gi_minor_versions.gi_minor_versions[0].version
 }
 
@@ -58,7 +58,7 @@ resource "oci_database_pluggable_database" "test_db1_local_cloned_pdb" {
 # }
 
 data "oci_database_pluggable_databases" "test_pdbs" {
-  compartment_id        = var.compartment_ocid
+  compartment_id        = var.compartment_id
   state = "AVAILABLE"
 }
 
